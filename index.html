@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+    <title>Yogitha's Blog</title>
+
+
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+
+<!--[if lte IE 8]>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+
+<![endif]-->
+<!--[if gt IE 8]><!-->
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+<!--<![endif]-->
+
+
+
+
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="blog-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="blog.css">
+    <!--<![endif]-->
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">Yogitha Polavarapu</h1>
+            <h2 class="brand-tagline">A little girl's musings and activities packed</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://yogithapolavarapu.github.io">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">Pinned Post</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+                        <!--<img class="post-avatar" alt="Tilo Mitra&#x27;s avatar" height="48" width="48" src="img/common/tilo-avatar.png">
+-->
+                        <h2 class="post-title">2to3 python</h2>
+
+                        <p class="post-meta">
+                            By <a href="#" class="post-author">Yogitha</a> under <a class="post-category post-category-design" href="#">python</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                          I could work fine with python2, as for python3, I never really gave it a go, this wasn't a problem till yesterday, where I was taking a test and python2 wasn't an accepted language and python3 was. Now, I didn't want to get to documentation of python 3 to check how inputs are taken and how print() is used in python3 and other changes. When it comes to a big program, taking input and displaying output might not be the only one's that change. So, I did this instead.Converting python2 to python3, It's a rather simple command.
+                          I use Ubuntu and so my post is with respect to Linux, but it wont differ much with windows either.
+                          Now, Let us write a code in python 2.7
+
+                          A simple code that takes a value from user and assigns to all the elements of array with default 0's
+                          <pre>#creating an array of size 10 and assigning all the elements to 0
+                          arr=[0]*10
+                          print arr
+                          #taking a value from user
+                          value=int(raw_input("Enter a value"))
+                          #assigning it to all the elements of the array
+                          arr=[value]*10
+                          print arr</pre>
+                          this code works extremely fine with python 2.7; output will be:<img class="alignnone size-full wp-image-688" src="https://yogithapolavarapu.files.wordpress.com/2016/07/screenshot-from-2016-07-31-16-33-36.png" alt="Screenshot from 2016-07-31 16-33-36" width="1036" height="599" />
+
+                          if you try to do this with python3, it'll show syntax errors, the very first error for the same code will be
+
+                          $ python3 program1.py
+                          File "program1.py", line 3
+                          print arr
+                          ^
+                          SyntaxError: Missing parentheses in call to 'print'
+
+                          Obviously, because you coded it in python 2 and you are asking python3 to interpret it, and in python3 print is a function, so lets use the command 2to3 and see what changes we have to do, to the existing python script to get it to work in python3<img class="alignnone size-full wp-image-691" src="https://yogithapolavarapu.files.wordpress.com/2016/07/screenshot-from-2016-07-31-16-35-20.png" alt="Screenshot from 2016-07-31 16-35-20" width="1021" height="662" />
+
+                          be calm for a second and it will show you what are to be added and what lines or syntax are to be modified<img class="alignnone size-full wp-image-694" src="https://yogithapolavarapu.files.wordpress.com/2016/07/screenshot-from-2016-07-31-16-36-36.png" alt="Screenshot from 2016-07-31 16-36-36" width="987" height="641" />
+
+                          + indicates you have to modify that line in the place of -
+
+                          for example, - print arr is the line that indicates print arr in the original code and +print (arr) says, into what this existing code has to be refactored to.
+
+                          let's apply all the 3 changes and see if the code works in python3<img class="alignnone size-full wp-image-697" src="https://yogithapolavarapu.files.wordpress.com/2016/07/screenshot-from-2016-07-31-16-38-34.png" alt="Screenshot from 2016-07-31 16-38-34" width="1103" height="662" />
+
+                          and thus with the suggested changes we can make the code work with python3 just the way it worked for python2.
+
+                          Now, what about super large programs? should we change every single line suggested manually?Is there a way to automate it to make all the changes? Can we code it in a way to make all the changes? I'll leave those thoughts to you to work on 😃                        </p>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        <li class="pure-menu-item"><a href="http://twitter.com/yogithapolavar/" class="pure-menu-link">Twitter</a></li>
+                        <li class="pure-menu-item"><a href="http://github.com/yogithapolavarapu/" class="pure-menu-link">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
